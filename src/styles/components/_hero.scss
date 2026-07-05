@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.hero {
+  background-image:
+    linear-gradient(
+      160deg,
+      rgba($color-navy-900, 0.92) 0%,
+      rgba($color-navy-700, 0.85) 100%
+    ),
+    url('../../assets/images/hero-steel-structure.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $color-text-inverse;
+  scroll-margin-top: $header-height;
+}
+
+.hero__inner {
+  max-width: 760px;
+  padding-block: $spacing-4xl;
+
+  @include respond-md {
+    padding-block: 7rem;
+  }
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  margin-bottom: $spacing-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-gold-400;
+}
+
+.hero__title {
+  color: $color-text-inverse;
+  margin-bottom: $spacing-lg;
+}
+
+.hero__description {
+  font-size: $font-size-md;
+  color: rgba($color-text-inverse, 0.8);
+  margin-bottom: $spacing-2xl;
+  max-width: 560px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}

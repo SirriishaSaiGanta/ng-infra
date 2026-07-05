@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.cards-grid {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+
+  @include respond-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include card-surface;
+  padding: $spacing-xl;
+}
+
+.card:hover {
+  box-shadow: $shadow-md;
+}
+
+.card__icon {
+  @include flex-center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: $spacing-md;
+  border-radius: $radius-md;
+  background-color: rgba($color-gold-400, 0.12);
+  color: $color-gold-600;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.card__title {
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-xs;
+}
+
+.card__description {
+  font-size: $font-size-sm;
+  margin-bottom: 0;
+}

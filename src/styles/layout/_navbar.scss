@@ -1,0 +1,102 @@
+@use '../abstracts' as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-border;
+}
+
+.navbar__inner {
+  position: relative;
+  @include flex-between($spacing-lg);
+  height: $header-height;
+}
+
+.navbar__brand {
+  @include heading-font;
+  font-size: $font-size-lg;
+  white-space: nowrap;
+}
+
+.navbar__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+
+  @include respond-lg {
+    display: none;
+  }
+}
+
+.navbar__toggle-bar {
+  width: 22px;
+  height: 2px;
+  background-color: $color-primary;
+  border-radius: $radius-full;
+}
+
+.navbar__nav {
+  display: none;
+  flex-direction: column;
+  gap: $spacing-md;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: $spacing-lg;
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-md;
+}
+
+.navbar__nav--open {
+  display: flex;
+}
+
+@include respond-lg {
+  .navbar__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    gap: $spacing-lg;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+    box-shadow: none;
+  }
+}
+
+.navbar__link {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-muted;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.navbar__cta {
+  display: inline-block;
+  padding: $spacing-xs $spacing-lg;
+  background-color: $color-accent;
+  color: $color-primary-dark;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+  text-align: center;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-accent-light;
+  }
+}

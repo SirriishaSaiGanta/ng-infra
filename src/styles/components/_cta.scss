@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.cta {
+  background-color: $color-primary-dark;
+  color: $color-text-inverse;
+}
+
+.cta__inner {
+  @include flex-center($spacing-xl);
+  flex-direction: column;
+  text-align: center;
+}
+
+.cta__title {
+  color: $color-text-inverse;
+  max-width: 480px;
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-md;
+}

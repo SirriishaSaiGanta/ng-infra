@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+::selection {
+  background-color: $color-accent-light;
+  color: $color-primary-dark;
+}
+
+a,
+button {
+  @include focus-ring;
+}
+
+.container {
+  @include container;
+}
+
+.section {
+  padding-block: $spacing-3xl;
+  scroll-margin-top: $header-height;
+
+  @include respond-md {
+    padding-block: $spacing-4xl;
+  }
+}
+
+.section--alt {
+  background-color: $color-bg-alt;
+}

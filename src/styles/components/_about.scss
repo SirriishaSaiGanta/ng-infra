@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+.about__grid {
+  display: grid;
+  gap: $spacing-2xl;
+
+  @include respond-lg {
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+  }
+}
+
+.about__media {
+  order: -1;
+
+  @include respond-lg {
+    order: 0;
+  }
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+}
+
+.about__vision {
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-md;
+}
+
+.about__mission {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding: $spacing-xl;
+  background-color: $color-bg-alt;
+  border-radius: $radius-lg;
+}
+
+.about__mission-item {
+  position: relative;
+  padding-left: $spacing-lg;
+  color: $color-text;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 8px;
+    height: 8px;
+    border-radius: $radius-full;
+    background-color: $color-accent;
+  }
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-lg;
+  margin-top: $spacing-3xl;
+  padding: $spacing-xl;
+  text-align: center;
+  background-color: $color-bg-alt;
+  border-left: 4px solid $color-accent;
+  border-radius: $radius-lg;
+
+  @include respond-md {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.founder-card__photo {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: $radius-full;
+  box-shadow: $shadow-md;
+}
+
+.founder-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.founder-card__quote {
+  font-family: $font-family-heading;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+  margin-bottom: $spacing-xs;
+}
+
+.founder-card__bio {
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-sm;
+}
+
+.founder-card__name {
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+  margin-bottom: 0;
+}
+
+.founder-card__title {
+  font-size: $font-size-sm;
+  color: $color-gold-600;
+  margin-bottom: 0;
+}

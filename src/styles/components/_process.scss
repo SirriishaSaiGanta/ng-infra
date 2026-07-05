@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.process {
+  display: grid;
+  gap: $spacing-2xl;
+
+  @include respond-lg {
+    grid-template-columns: repeat(5, 1fr);
+    gap: $spacing-lg;
+  }
+}
+
+.process__step {
+  position: relative;
+  text-align: center;
+}
+
+.process__step:not(:last-child)::after {
+  content: '';
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 20px);
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: $color-border;
+
+  @include respond-lg {
+    display: block;
+  }
+}
+
+.process__number {
+  @include flex-center;
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto $spacing-md;
+  border-radius: $radius-full;
+  background-color: $color-primary;
+  color: $color-text-inverse;
+  font-family: $font-family-heading;
+  font-weight: $font-weight-semibold;
+}
+
+.process__icon {
+  @include flex-center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto $spacing-sm;
+  color: $color-gold-600;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.process__title {
+  font-size: $font-size-md;
+  margin-bottom: $spacing-xs;
+}
+
+.process__description {
+  font-size: $font-size-sm;
+}

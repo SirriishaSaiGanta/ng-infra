@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.contact__grid {
+  display: grid;
+  gap: $spacing-2xl;
+
+  @include respond-lg {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  font-size: $font-size-md;
+  color: $color-text;
+}
+
+.contact__form-card {
+  @include card-surface;
+  padding: $spacing-xl;
+}
