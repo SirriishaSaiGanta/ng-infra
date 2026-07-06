@@ -1,7 +1,7 @@
 import SectionHeading from '../ui/SectionHeading'
 import { SECTION_IDS } from '../../constants/sectionIds'
 import { COMPANY_INFO } from '../../constants/company'
-import plantExterior from '../../assets/images/plant-exterior.jpeg'
+import plantExterior from '../../assets/images/about_us.jpg'
 import founderPhoto from '../../assets/images/founder.jpeg'
 
 const AboutCompany = () => {

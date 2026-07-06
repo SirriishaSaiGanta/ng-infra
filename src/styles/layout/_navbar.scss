@@ -15,9 +15,13 @@
 }
 
 .navbar__brand {
-  @include heading-font;
-  font-size: $font-size-lg;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: calc(#{$header-height} - #{$spacing-xs});
+  width: auto;
 }
 
 .navbar__toggle {

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NAV_LINKS } from '../../constants/navLinks'
 import { SECTION_IDS } from '../../constants/sectionIds'
+import company_logo from '../../assets/images/company_logo.png'
 
 interface NavbarProps {
   onRequestQuote: () => void
@@ -19,7 +20,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
     <header className="navbar">
       <div className="container navbar__inner">
         <a href={`#${SECTION_IDS.hero}`} className="navbar__brand" onClick={closeMenu}>
-          NG Infra Developers
+          <img src={company_logo} alt="NG Infra Developers" className="navbar__logo" />
         </a>
 
         <button
