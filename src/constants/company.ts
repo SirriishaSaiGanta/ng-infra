@@ -4,7 +4,7 @@ export const COMPANY_INFO: CompanyInfo = {
   name: 'NG Infra Developers',
   tagline: 'Building Trust. Creating Futures.',
   phone: '9550625590',
-  email: 'nginfra23@gmail.com',
+  email: 'rahul.ganta@nginfra.co',
   address:
     '#5-19/54, Flat No. 401, Parkwood Signature Apartments, Block-2, Srivani Nagar, Hyderabad – 502032',
   founder: {
