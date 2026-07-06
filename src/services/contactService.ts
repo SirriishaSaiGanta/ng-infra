@@ -7,7 +7,9 @@ const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL?.trim() || COMPANY_INFO
 
 export const submitContactForm = (values: ContactFormValues) => {
   if (!FORMSPREE_ENDPOINT) {
-    throw new Error('Missing VITE_FORMSPREE_ENDPOINT. Set it to your Formspree form endpoint.')
+    throw new Error(
+      'Missing VITE_FORMSPREE_ENDPOINT. Set it to your Formspree form endpoint.',
+    )
   }
 
   return axios.post(
